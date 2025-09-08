@@ -1,111 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About – Imambux</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
+  <!-- Header with gradient -->
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand"><a href="/" style="color: #fff; text-decoration: none;">IMAMBUX</a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="about.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="consultancy.html">Consultancy</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="wrap">
-    <div class="brand"><a href="/" style="color:#fff;text-decoration:none">IMAMBUX</a></div>
-    <nav>
+  <!-- Profile Image, centered and oval -->
+  <section class="hero">
+    <div class="wrap center-content">
+      <div class="profile-oval">
+        <img src="assets/imam.jpg.jpeg" alt="Imam Bux" />
+      </div>
+      <div class="hero-text">
+        <h1>Imam Bux</h1>
+        <p>
+          I am Imam Bux, passionate about research, consultancy, and community engagement.
+          I work across academia, industry, and society to create practical, sustainable impact.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main content: Biography, Education, Awards -->
+  <main class="section">
+    <div class="card">
+      <h2>Biography</h2>
+      <p class="lead">
+        Write 4–6 lines describing your background, interests, and current role.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Education</h2>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="about.html">About</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="consultancy.html">Consultancy</a></li>
-        <li><a href="community.html">Community</a></li>
-        <li><a href="publications.html">Publications</a></li>
+        <li>Bachelor’s in … (Year, University)</li>
+        <li>Master’s in … (Year, University)</li>
+        <li>PhD in … (Year, University)</li>
       </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-container">
-    <div class="profile-pic">
-      <img src="assets/imam.jpg.jpeg" alt="Imam Bux">
     </div>
-    <div class="hero-text">
-      <h1>Imam Bux</h1>
-      <p>I am Imam Bux, passionate about research, consultancy, and community engagement.</p>
+    <div class="card">
+      <h2>Awards & Achievements</h2>
+      <ul>
+        <li>Award / Recognition (year)</li>
+        <li>Grant / Scholarship (year)</li>
+      </ul>
     </div>
-  </div>
-</section>
+  </main>
 
-<main class="section">
-  <div class="card">
-    <h2>Biography</h2>
-    <p class="lead">Write 4–6 lines describing your background, interests, and current role.</p>
-  </div>
-
-  <div class="card">
-    <h2>Education</h2>
-    <ul>
-      <li>Bachelor’s in … (Year, University)</li>
-      <li>Master’s in … (Year, University)</li>
-      <li>PhD in … (Year, University)</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Awards & Achievements</h2>
-    <ul>
-      <li>Award / Recognition (year)</li>
-      <li>Grant / Scholarship (year)</li>
-    </ul>
-  </div>
-</main>
-
-<footer>
-  © <span id="year"></span> Imambux • All rights reserved
-</footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <!-- Footer -->
+  <footer>
+    © <span id="year"></span> Imambux • All rights reserved
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
 
 
-/* Hero Section */
-.hero {
-  background: #0b1530;
-  padding: 60px 20px;
-}
-
-.hero-container {
+/* Centering and oval image styling for About page */
+.center-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1100px;
-  margin: 0 auto;
-  flex-wrap: wrap; /* keeps responsive on mobile */
+  gap: 25px;
 }
 
-.profile-pic img {
-  width: 150px; /* smaller */
-  height: auto;
-  border-radius: 8px; /* rectangle */
+.profile-oval img {
+  width: 140px;              /* small size */
+  height: 180px;             /* maintain proportions */
+  border-radius: 50%;        /* creates oval shape when width ≠ height */
+  object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
+/* Hero text styling */
 .hero-text {
+  text-align: center;
   max-width: 600px;
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   margin-bottom: 10px;
   color: #fff;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 1.6;
   color: #ddd;
 }
+
 
