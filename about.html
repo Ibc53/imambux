@@ -3,59 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Me – Imambux</title>
+  <title>About – Imambux</title>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
   <!-- Header -->
-  <header>
-    <div class="brand"><a href="/">IMAMBUX</a></div>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="consultancy.html">Consultancy</a></li>
-        <li><a href="community.html">Community</a></li>
-        <li><a href="publications.html">Publications</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand"><a href="/" style="color:#fff;text-decoration:none">IMAMBUX</a></div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a class="active" href="about.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="consultancy.html">Consultancy</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a href="publications.html">Publications</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <section class="hero">
-      <h1>About Me</h1>
-      <p>
-        <!-- ⭐ Paste your "About Me" description here -->
-        I am Imam Bux, passionate about research, consultancy, and community engagement. 
-        This is where you can introduce yourself, your background, and your goals.
+  <!-- Hero banner -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="kicker">About</div>
+      <h1>Imam Bux</h1>
+      <p class="sub">
+        <!-- ⭐ Paste your About Me text here -->
+        I am Imam Bux, passionate about research, consultancy, and community engagement.
+        I work across academia, industry, and society to create practical, sustainable impact.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <section class="content">
+  <!-- Content -->
+  <main class="section">
+    <div class="card">
+      <h2>Biography</h2>
+      <p class="lead">
+        <!-- Replace with your detailed bio -->
+        Write 4–6 lines describing your background, interests, and current role.
+      </p>
+    </div>
+
+    <div class="card">
       <h2>Education</h2>
       <ul>
-        <li>Bachelor’s in …</li>
-        <li>Master’s in …</li>
-        <li>PhD in …</li>
+        <li>Bachelor’s in … (Year, University)</li>
+        <li>Master’s in … (Year, University)</li>
+        <li>PhD in … (Year, University)</li>
       </ul>
-    </section>
+    </div>
 
-    <section class="content">
+    <div class="card">
       <h2>Awards & Achievements</h2>
-      <p>[List your awards, recognitions, scholarships, or grants here]</p>
-    </section>
+      <ul>
+        <li> award / recognition (year) </li>
+        <li> grant / scholarship (year) </li>
+      </ul>
+    </div>
   </main>
 
-  <!-- Footer -->
   <footer>
     © <span id="year"></span> Imambux • All rights reserved
   </footer>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
+
