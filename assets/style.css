@@ -47,10 +47,15 @@ nav a:hover,nav a.active{border-bottom-color:rgba(255,255,255,.9)}
     url("/assets/images/about-hero.jpg");
   background-size:cover;background-position:center;
 }
-.hero .wrap{max-width:1200px;margin:auto;padding:60px 22px}
-.kicker{opacity:.9;letter-spacing:.1em;text-transform:uppercase}
-.hero h1{margin:.2em 0 .4em 0;font-size:clamp(32px,5vw,56px);line-height:1.15}
-.hero .sub{max-width:720px;opacity:.95;font-size:1.15rem}
+/* Profile Picture Style */
+.profile-pic img {
+  width: 160px;        /* Smaller size (adjust as you like) */
+  height: auto;
+  border-radius: 50%;  /* Makes the oval/circle effect */
+  margin: 20px auto;   /* Centers under the header */
+  display: block;      /* Ensures it's centered */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
 
 /* ====== Sections & cards ====== */
 .section{max-width:1100px;margin:28px auto;padding:0 22px}
