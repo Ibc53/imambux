@@ -5,16 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About – Imambux</title>
   <link rel="stylesheet" href="assets/style.css">
-  <link rel="stylesheet" href="assets/style.css">
-<style>body{background:#0b1530;color:#fff}</style>
 </head>
 <body>
-<!-- Profile Image -->
-<div style="text-align:center; margin:20px 0;">
-  <img src="assets/imam.jpg.jpeg" 
-       alt="Imam Bux" 
-       style="width:250px; border-radius:50%; box-shadow:0px 4px 10px rgba(0,0,0,0.5);">
-</div>
+
   <!-- Header -->
   <header class="site-header">
     <div class="wrap">
@@ -31,39 +24,22 @@
       </nav>
     </div>
   </header>
- /* Hero Section */
-.hero {
-  background: #0b1530;
-  padding: 50px 20px;
-  text-align: left;
-}
 
-.hero-container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="wrap hero-container">
+      <!-- Profile Image -->
+      <div class="profile-pic">
+        <img src="assets/imam.jpg.jpeg" alt="Imam Bux">
+      </div>
 
-.profile-pic img {
-  width: 220px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #ddd;
-}
+      <!-- Text -->
+      <div class="hero-text">
+        <h1>Imam Bux</h1>
+        <p>I am Imam Bux, passionate about research, consultancy, and community engagement. 
+           I work across academia, industry, and society to create practical, sustainable impact.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Content -->
@@ -71,7 +47,6 @@
     <div class="card">
       <h2>Biography</h2>
       <p class="lead">
-        <!-- Replace with your detailed bio -->
         Write 4–6 lines describing your background, interests, and current role.
       </p>
     </div>
@@ -97,7 +72,41 @@
   <footer>
     © <span id="year"></span> Imambux • All rights reserved
   </footer>
-  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
 
+/* Hero Section */
+.hero {
+  background: #0b1530;
+  padding: 50px 20px;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profile-pic img {
+  width: 250px;
+  height: auto;
+  border-radius: 8px; /* rectangular, not oval */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ddd;
+}
