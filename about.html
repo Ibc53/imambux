@@ -25,22 +25,26 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="wrap hero-container">
-      <!-- Profile Image -->
-      <div class="profile-pic">
-        <img src="assets/imam.jpg.jpeg" alt="Imam Bux">
-      </div>
-
-      <!-- Text -->
-      <div class="hero-text">
-        <h1>Imam Bux</h1>
-        <p>I am Imam Bux, passionate about research, consultancy, and community engagement. 
-           I work across academia, industry, and society to create practical, sustainable impact.</p>
-      </div>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-container">
+    
+    <!-- Profile Picture -->
+    <div class="profile-pic">
+      <img src="assets/imam.jpg.jpeg" alt="Imam Bux">
     </div>
-  </section>
+    
+    <!-- Text -->
+    <div class="hero-text">
+      <h1>Imam Bux</h1>
+      <p>
+        I am Imam Bux, passionate about research, consultancy, and community engagement. 
+        I work across academia, industry, and society to create practical, sustainable impact.
+      </p>
+    </div>
+  </div>
+</section>
+
 
   <!-- Content -->
   <main class="section">
@@ -81,22 +85,28 @@
 /* Hero Section */
 .hero {
   background: #0b1530;
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 .hero-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 40px;
   max-width: 1100px;
   margin: 0 auto;
+  flex-wrap: wrap; /* keeps responsive on mobile */
 }
 
 .profile-pic img {
-  width: 250px;
+  width: 170px;   /* reduced size */
   height: auto;
-  border-radius: 8px; /* rectangular, not oval */
+  border-radius: 8px; /* rectangular instead of oval */
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.hero-text {
+  max-width: 600px;
 }
 
 .hero-text h1 {
@@ -110,3 +120,4 @@
   line-height: 1.6;
   color: #ddd;
 }
+
