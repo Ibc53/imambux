@@ -8,79 +8,67 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="wrap">
-      <div class="brand"><a href="/" style="color:#fff;text-decoration:none">IMAMBUX</a></div>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a class="active" href="about.html">About</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="consultancy.html">Consultancy</a></li>
-          <li><a href="community.html">Community</a></li>
-          <li><a href="publications.html">Publications</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<!-- Header -->
+<header class="site-header">
+  <div class="wrap">
+    <div class="brand"><a href="/" style="color:#fff;text-decoration:none">IMAMBUX</a></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="consultancy.html">Consultancy</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="publications.html">Publications</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-container">
-    
-    <!-- Profile Picture -->
     <div class="profile-pic">
       <img src="assets/imam.jpg.jpeg" alt="Imam Bux">
     </div>
-    
-    <!-- Text -->
     <div class="hero-text">
       <h1>Imam Bux</h1>
-      <p>
-        I am Imam Bux, passionate about research, consultancy, and community engagement. 
-        I work across academia, industry, and society to create practical, sustainable impact.
-      </p>
+      <p>I am Imam Bux, passionate about research, consultancy, and community engagement.</p>
     </div>
   </div>
 </section>
 
+<main class="section">
+  <div class="card">
+    <h2>Biography</h2>
+    <p class="lead">Write 4–6 lines describing your background, interests, and current role.</p>
+  </div>
 
-  <!-- Content -->
-  <main class="section">
-    <div class="card">
-      <h2>Biography</h2>
-      <p class="lead">
-        Write 4–6 lines describing your background, interests, and current role.
-      </p>
-    </div>
+  <div class="card">
+    <h2>Education</h2>
+    <ul>
+      <li>Bachelor’s in … (Year, University)</li>
+      <li>Master’s in … (Year, University)</li>
+      <li>PhD in … (Year, University)</li>
+    </ul>
+  </div>
 
-    <div class="card">
-      <h2>Education</h2>
-      <ul>
-        <li>Bachelor’s in … (Year, University)</li>
-        <li>Master’s in … (Year, University)</li>
-        <li>PhD in … (Year, University)</li>
-      </ul>
-    </div>
+  <div class="card">
+    <h2>Awards & Achievements</h2>
+    <ul>
+      <li>Award / Recognition (year)</li>
+      <li>Grant / Scholarship (year)</li>
+    </ul>
+  </div>
+</main>
 
-    <div class="card">
-      <h2>Awards & Achievements</h2>
-      <ul>
-        <li> award / recognition (year) </li>
-        <li> grant / scholarship (year) </li>
-      </ul>
-    </div>
-  </main>
-
-  <footer>
-    © <span id="year"></span> Imambux • All rights reserved
-  </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<footer>
+  © <span id="year"></span> Imambux • All rights reserved
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
+
 
 /* Hero Section */
 .hero {
