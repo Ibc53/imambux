@@ -21,6 +21,12 @@ body{
   background:var(--bg);
 }
 
+h1,h2,h3{font-weight:700;color:var(--ink)}
+h1{font-size:2rem;margin-bottom:.5em}
+h2{margin:.2em 0 .6em 0;font-size:1.6rem}
+h3{font-size:1.2rem;margin-top:0}
+ul{margin:0 0 0 1.1rem;padding:0}
+
 /* ====== Header (pink–amber band) ====== */
 .site-header{
   background:linear-gradient(90deg,var(--brand1),var(--brand2));
@@ -39,32 +45,156 @@ nav a{
 }
 nav a:hover,nav a.active{border-bottom-color:rgba(255,255,255,.9)}
 
-/* ====== Hero (dark navy with optional bg image) ====== */
+/* ====== Hero ====== */
 .hero{
-  min-height:360px;color:var(--ink-invert);display:flex;align-items:center;
+  min-height:360px;display:flex;align-items:center;justify-content:center;
+  text-align:center;color:var(--ink-invert);
   background:
     linear-gradient(rgba(11,21,48,.80),rgba(11,21,48,.80)),
     url("/assets/images/about-hero.jpg");
   background-size:cover;background-position:center;
+  padding:40px 20px;
 }
+.hero p{max-width:800px;margin:0 auto;font-size:1.1rem;color:#e2e8f0}
+
 /* Profile Picture Style */
 .profile-pic img {
-  width: 160px;        /* Smaller size (adjust as you like) */
-  height: auto;
-  border-radius: 50%;  /* Makes the oval/circle effect */
-  margin: 20px auto;   /* Centers under the header */
-  display: block;      /* Ensures it's centered */
+  width: 160px;
+  border-radius: 50%;
+  margin: 20px auto;
+  display: block;
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
 /* ====== Sections & cards ====== */
-.section{max-width:1100px;margin:28px auto;padding:0 22px}
-.card{background:var(--panel);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;margin-bottom:22px}
-h2{margin:.2em 0 .4em 0;font-size:1.6rem}
-ul{margin:0 0 0 1.1rem}
+.section{max-width:1100px;margin:60px auto;padding:0 22px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.card{
+  background:var(--panel);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:22px;
+}
+.card h3{color:var(--brand1);margin-top:0}
+
+/* ====== Stats ====== */
+.stats ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:40px;
+}
+.stats li{font-size:1rem;text-align:center}
+.stats strong{
+  display:block;
+  font-size:1.8rem;
+  color:var(--brand1);
+}
+
+/* ====== Buttons ====== */
+.btn{
+  display:inline-block;
+  padding:12px 26px;
+  border-radius:10px;
+  background:linear-gradient(90deg,var(--brand1),var(--brand2));
+  color:#fff;
+  font-weight:600;
+  margin:6px;
+  transition:all .2s ease;
+}
+.btn:hover{transform:translateY(-2px);opacity:.9}
+.btn.secondary{background:#475569}
+
+/* ====== Contact Band ====== */
+.contact-band{
+  background:#f1f5f9;
+  padding:60px 22px;
+  text-align:center;
+}
+.contact-band h2{margin-bottom:.4em}
+.contact-band p{margin-bottom:1em;font-size:1.1rem;color:var(--muted)}
 
 /* ====== Footer ====== */
-footer{margin-top:40px;background:#0f172a;color:#cbd5e1;padding:18px 22px;text-align:center}
+footer{
+  margin-top:40px;
+  background:#0f172a;
+  color:#cbd5e1;
+  padding:18px 22px;
+  text-align:center;
+  font-size:.9rem;
+}
 
-/* Utility */
+/* ====== Utilities ====== */
 .lead{font-size:1.1rem;color:var(--muted)}
+.center-content{text-align:center}
+ 
+* ====== Responsive Breakpoints ====== */
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .site-header .wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav ul {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+  .hero {
+    min-height: 280px;
+    padding: 60px 20px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .stats ul {
+    gap: 20px;
+  }
+}
+
+/* Mobiles (≤ 600px) */
+@media (max-width: 600px) {
+  .brand {
+    font-size: 1.2rem;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  nav a {
+    font-size: 0.85rem;
+    padding: 4px 0;
+  }
+  .hero {
+    min-height: auto;
+    padding: 40px 15px;
+  }
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  .hero p {
+    font-size: 0.95rem;
+  }
+  .cards {
+    grid-template-columns: 1fr; /* stack cards */
+  }
+  .stats ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+  footer {
+    font-size: 0.8rem;
+  }
+}
