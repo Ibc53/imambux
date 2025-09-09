@@ -8,12 +8,12 @@
 </head>
 <body>
 
+<!-- Header -->
 <header class="site-header">
   <div class="wrap">
     <div class="brand"><a href="/" style="color:#fff;text-decoration:none">IMAMBUX</a></div>
     <nav>
-      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-      <ul class="nav-links">
+      <ul>
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="research.html">Research</a></li>
@@ -25,6 +25,7 @@
   </div>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
   <div class="wrap">
     <h1>Agricultural Extension • Tech Adoption • Rural Development</h1>
@@ -38,6 +39,7 @@
   </div>
 </section>
 
+<!-- Impact Mini-Stats -->
 <section class="stats">
   <div class="wrap">
     <ul>
@@ -49,18 +51,29 @@
   </div>
 </section>
 
-<section class="section">
+<!-- How I Create Impact -->
+<section class="impact">
   <div class="wrap">
     <h2>How I Create Impact</h2>
     <div class="cards">
-      <div class="card"><h3>Research</h3><p>Exploring diffusion & adoption, dairy & field crops, and circular economy.</p></div>
-      <div class="card"><h3>Consultancy</h3><p>Farmer training, survey/instrument design, and impact evaluation studies.</p></div>
-      <div class="card"><h3>Community</h3><p>Mentorship, outreach, youth leadership, and environmental action programs.</p></div>
+      <div class="card">
+        <h3>Research</h3>
+        <p>Exploring diffusion & adoption, dairy & field crops, and circular economy.</p>
+      </div>
+      <div class="card">
+        <h3>Consultancy</h3>
+        <p>Farmer training, survey/instrument design, and impact evaluation studies.</p>
+      </div>
+      <div class="card">
+        <h3>Community</h3>
+        <p>Mentorship, outreach, youth leadership, and environmental action programs.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- Featured Work -->
+<section class="featured">
   <div class="wrap">
     <h2>Featured Work</h2>
     <ul>
@@ -71,6 +84,7 @@
   </div>
 </section>
 
+<!-- Contact Band -->
 <section class="contact-band">
   <div class="wrap">
     <h2>Let’s Collaborate</h2>
@@ -80,11 +94,10 @@
   </div>
 </section>
 
-<footer>© <span id="year"></span> Imam Bux • All rights reserved</footer>
-<script>
-  document.getElementById('year').textContent=new Date().getFullYear();
-  const toggle=document.querySelector(".menu-toggle"),navLinks=document.querySelector(".nav-links");
-  toggle.addEventListener("click",()=>{navLinks.classList.toggle("show");toggle.classList.toggle("open");toggle.textContent=navLinks.classList.contains("show")?"✕":"☰";});
-</script>
+<!-- Footer -->
+<footer>
+  © <span id="year"></span> Imam Bux • All rights reserved
+</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
