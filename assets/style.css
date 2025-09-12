@@ -149,14 +149,60 @@ nav a:hover,nav a.active{border-bottom-color:rgba(255,255,255,.9)}
 .btn:hover{transform:translateY(-2px);opacity:.9}
 .btn.secondary{background:#475569}
 
-/* ====== Contact Band ====== */
-.contact-band{
-  background:#f1f5f9;
-  padding:60px 22px;
-  text-align:center;
+/* ====== Contact Me Section ====== */
+.contact-me {
+  background: #f9fafb;
+  padding: 60px 22px;
+  text-align: center;
 }
-.contact-band h2{margin-bottom:.4em}
-.contact-band p{margin-bottom:1em;font-size:1.1rem;color:var(--muted)}
+
+.contact-me h2 {
+  margin-bottom: 1em;
+  font-size: 1.8rem;
+  color: var(--brand1);
+}
+
+.contact-me form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.contact-me input,
+.contact-me textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-me input:focus,
+.contact-me textarea:focus {
+  border-color: var(--brand1);
+  outline: none;
+}
+
+.contact-me button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--brand1), var(--brand2));
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-me button:hover {
+  opacity: 0.9;
+}
 
 /* ====== Footer ====== */
 footer{
