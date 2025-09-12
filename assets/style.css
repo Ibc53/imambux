@@ -46,6 +46,52 @@ nav a{
 nav a:hover,nav a.active{border-bottom-color:rgba(255,255,255,.9)}
 
 /* ====== Hero ====== */
+/* ====== Hero Flex Layout & Profile Picture ====== */
+.hero-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px; /* space between image and text */
+  text-align: left;
+}
+
+/* Profile Picture Circle Style */
+.profile-pic img {
+  width: 150px;       /* larger size on desktop */
+  height: 150px;
+  border-radius: 50%; /* perfect circle */
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border: 3px solid #fff; /* thin white border */
+}
+
+/* Hero Text */
+.hero-text {
+  max-width: 600px;
+}
+.hero-text h1 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: var(--ink-invert);
+}
+.hero-text p {
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .hero-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+}
+
 .hero {
   min-height: 280px; /* fixed banner height */
   display: flex;
