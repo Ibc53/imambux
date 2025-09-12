@@ -1,3 +1,4 @@
+🔧 Corrected Final CSS (ready to paste)
 /* ====== Global theme ====== */
 :root{
   --ink:#0b1020;          /* dark text for light sections */
@@ -54,14 +55,22 @@ nav a:hover,nav a.active{border-bottom-color:rgba(255,255,255,.9)}
   text-align: center;
   color: var(--ink-invert);
 
-  /* Background image + dark overlay */
+  /* Background with fallback color + dark overlay + image */
   background:
     linear-gradient(rgba(11, 21, 48, 0.80), rgba(11, 21, 48, 0.80)),
-    url("assets/images/cover.png");
+    url("assets/images/cover.png"),
+    var(--hero); /* fallback navy if image fails */
 
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  color: var(--ink-invert);
 }
 
 .hero p {
@@ -74,7 +83,7 @@ nav a:hover,nav a.active{border-bottom-color:rgba(255,255,255,.9)}
 /* ====== Responsive Breakpoints (Hero adjustments) ====== */
 @media (max-width: 992px) {
   .hero {
-    min-height: 220px; /* slightly smaller on tablets */
+    min-height: 220px; /* smaller on tablets */
     padding: 60px 20px;
   }
   .hero h1 {
@@ -97,6 +106,7 @@ nav a:hover,nav a.active{border-bottom-color:rgba(255,255,255,.9)}
     font-size: 0.95rem;
   }
 }
+
 /* ====== Sections & cards ====== */
 .section{max-width:1100px;margin:60px auto;padding:0 22px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
@@ -161,8 +171,8 @@ footer{
 /* ====== Utilities ====== */
 .lead{font-size:1.1rem;color:var(--muted)}
 .center-content{text-align:center}
- 
-* ====== Responsive Breakpoints ====== */
+
+/* ====== Responsive Breakpoints ====== */
 
 /* Tablets (≤ 992px) */
 @media (max-width: 992px) {
