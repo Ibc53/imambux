@@ -271,22 +271,6 @@ nav a.active{
   cursor:pointer;
 }
 
-.google-form-embed{
-  max-width:900px;
-  margin:0 auto;
-  background:#fff;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
-  border:1px solid #e5e7eb;
-}
-
-.google-form-embed iframe{
-  display:block;
-  width:100%;
-  border:none;
-  background:#fff;
-}
 
 footer{
   background:#0f172a;
@@ -343,4 +327,8 @@ footer{
     text-align:center;
     margin:10px 0 0;
   }
+}
+.contact-button-only{
+  text-align:center;
+  margin-top:12px;
 }
