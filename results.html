@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Student Results | Imam Bux</title>
+
+  <meta name="description"
+        content="Student result portal. Search examination results securely using seat number and result PIN.">
+
+  <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+
+    .result-section{
+      padding:60px 0;
+    }
+
+    .result-search-box{
+      max-width:680px;
+      margin:0 auto;
+      background:#ffffff;
+      border-radius:18px;
+      box-shadow:0 10px 30px rgba(0,0,0,.12);
+      padding:32px;
+    }
+
+    .result-search-box h2{
+      text-align:center;
+      margin-bottom:8px;
+    }
+
+    .result-intro{
+      text-align:center;
+      color:#5b6b84;
+      margin-bottom:24px;
+    }
+
+    .result-form-group{
+      margin-bottom:16px;
+    }
+
+    .result-form-group label{
+      display:block;
+      margin-bottom:6px;
+      font-weight:700;
+      color:#0b1020;
+    }
+
+    .result-form-group input{
+      width:100%;
+      padding:14px 15px;
+      border:1px solid #cbd5e1;
+      border-radius:10px;
+      font-size:1rem;
+      font-family:inherit;
+    }
+
+    .result-form-group input:focus{
+      outline:none;
+      border-color:#ec4899;
+      box-shadow:0 0 0 3px rgba(236,72,153,.10);
+    }
+
+    .result-search-button{
+      width:100%;
+      border:none;
+      cursor:pointer;
+      margin-top:6px;
+    }
+
+    #loading{
+      display:none;
+      text-align:center;
+      margin-top:22px;
+      color:#5b6b84;
+      font-weight:600;
+    }
+
+    #resultMessage{
+      text-align:center;
+      margin-top:20px;
+      font-weight:700;
+    }
+
+    .result-error{
+      color:#b91c1c;
+      background:#fef2f2;
+      border:1px solid #fecaca;
+      padding:12px;
+      border-radius:10px;
+    }
+
+    .result-card{
+      display:none;
+      margin-top:32px;
+      padding-top:25px;
+      border-top:3px solid #ec4899;
+    }
+
+    .result-card h2{
+      color:#ec4899;
+      margin-bottom:18px;
+    }
+
+    .result-table{
+      width:100%;
+      border-collapse:collapse;
+      background:#ffffff;
+    }
+
+    .result-table tr{
+      border-bottom:1px solid #e2e8f0;
+    }
+
+    .result-table td{
+      padding:12px 10px;
+      vertical-align:top;
+    }
+
+    .result-table td:first-child{
+      width:42%;
+      font-weight:700;
+      color:#334155;
+    }
+
+    .result-table td:last-child{
+      color:#0b1020;
+    }
+
+    .result-status-pass{
+      color:#15803d !important;
+      font-weight:800;
+    }
+
+    .result-status-fail{
+      color:#b91c1c !important;
+      font-weight:800;
+    }
+
+    .result-note{
+      margin-top:20px;
+      padding:13px;
+      background:#f8fafc;
+      color:#64748b;
+      border-radius:10px;
+      font-size:.9rem;
+      text-align:center;
+    }
+
+    @media (max-width:640px){
+
+      .result-search-box{
+        padding:22px 16px;
+      }
+
+      .result-table td{
+        display:block;
+        width:100% !important;
+        padding:7px 5px;
+      }
+
+      .result-table td:first-child{
+        padding-top:13px;
+        padding-bottom:2px;
+      }
+
+      .result-table td:last-child{
+        padding-top:2px;
+        padding-bottom:13px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="site-header">
+
+  <div class="wrap nav-wrap">
+
+    <div class="brand">
+      <a href="index.html">IMAMBUX</a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="consultancy.html">Consultancy</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a class="active" href="results.html">Results</a></li>
+      </ul>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero hero-inner">
+
+  <div class="wrap center-text">
+
+    <p class="eyebrow">
+      Student Services
+    </p>
+
+    <h1>
+      Student Result Portal
+    </h1>
+
+    <p class="narrow-text">
+      Enter your Seat Number and confidential Result PIN to view your examination result.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     RESULT SEARCH
+========================= -->
+
+<main class="result-section">
+
+  <div class="wrap">
+
+    <div class="result-search-box">
+
+      <h2>Search Your Result</h2>
+
+      <p class="result-intro">
+        Please enter your credentials exactly as provided.
+      </p>
+
+
+      <div class="result-form-group">
+
+        <label for="seatNo">
+          Seat Number
+        </label>
+
+        <input
+          type="text"
+          id="seatNo"
+          placeholder="e.g. AEE001"
+          autocomplete="off"
+          maxlength="30">
+
+      </div>
+
+
+      <div class="result-form-group">
+
+        <label for="resultPin">
+          Result PIN
+        </label>
+
+        <input
+          type="password"
+          id="resultPin"
+          placeholder="Enter Result PIN"
+          autocomplete="off"
+          maxlength="20">
+
+      </div>
+
+
+      <button
+        type="button"
+        class="btn result-search-button"
+        id="searchButton"
+        onclick="searchResult()">
+
+        Search Result
+
+      </button>
+
+
+      <div id="loading">
+        Searching result...
+      </div>
+
+
+      <div id="resultMessage"></div>
+
+
+      <!-- =========================
+           RESULT DISPLAY
+      ========================= -->
+
+      <div
+        id="resultCard"
+        class="result-card">
+
+        <h2>Result Details</h2>
+
+        <table
+          class="result-table"
+          id="resultTable">
+        </table>
+
+        <div class="result-note">
+          This result is provided for student information.
+          Please contact the concerned instructor or department if any discrepancy is found.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+  © <span id="year"></span> Imam Bux • All rights reserved
+</footer>
+
+
+<script>
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+/* ==========================================
+   GOOGLE APPS SCRIPT RESULT API
+========================================== */
+
+const RESULT_API =
+"https://script.google.com/macros/s/AKfycbyZREZ1wlGaliRRRFTzaTUbvif0U0W7OGLSOqQYj03SZDojqN6ztbSnp96IMyyeVi3h/exec";
+
+
+/* ==========================================
+   SEARCH FUNCTION
+========================================== */
+
+async function searchResult(){
+
+  const seatInput =
+    document.getElementById("seatNo");
+
+  const pinInput =
+    document.getElementById("resultPin");
+
+  const seat =
+    seatInput.value.trim().toUpperCase();
+
+  const pin =
+    pinInput.value.trim();
+
+  const message =
+    document.getElementById("resultMessage");
+
+  const loading =
+    document.getElementById("loading");
+
+  const resultCard =
+    document.getElementById("resultCard");
+
+  const resultTable =
+    document.getElementById("resultTable");
+
+  const searchButton =
+    document.getElementById("searchButton");
+
+
+  message.innerHTML = "";
+  resultCard.style.display = "none";
+
+
+  /* Validation */
+
+  if(!seat){
+
+    showError("Please enter your Seat Number.");
+    seatInput.focus();
+
+    return;
+  }
+
+
+  if(!pin){
+
+    showError("Please enter your Result PIN.");
+    pinInput.focus();
+
+    return;
+  }
+
+
+  loading.style.display = "block";
+
+  searchButton.disabled = true;
+
+  searchButton.textContent =
+    "Searching...";
+
+
+  try{
+
+    const url =
+      RESULT_API +
+      "?seat=" +
+      encodeURIComponent(seat) +
+      "&pin=" +
+      encodeURIComponent(pin);
+
+
+    const response =
+      await fetch(url);
+
+
+    if(!response.ok){
+
+      throw new Error(
+        "Server response error."
+      );
+
+    }
+
+
+    const data =
+      await response.json();
+
+
+    loading.style.display = "none";
+
+    searchButton.disabled = false;
+
+    searchButton.textContent =
+      "Search Result";
+
+
+    if(!data.success){
+
+      showError(
+        data.message ||
+        "No matching result found."
+      );
+
+      return;
+    }
+
+
+    displayResult(data.result);
+
+  }
+
+  catch(error){
+
+    loading.style.display = "none";
+
+    searchButton.disabled = false;
+
+    searchButton.textContent =
+      "Search Result";
+
+
+    showError(
+      "Unable to retrieve the result. Please try again later."
+    );
+
+
+    console.error(
+      "Result search error:",
+      error
+    );
+
+  }
+
+}
+
+
+/* ==========================================
+   DISPLAY RESULT
+========================================== */
+
+function displayResult(result){
+
+  const table =
+    document.getElementById("resultTable");
+
+  const card =
+    document.getElementById("resultCard");
+
+  const message =
+    document.getElementById("resultMessage");
+
+
+  table.innerHTML = "";
+
+  message.innerHTML = "";
+
+
+  /*
+    Preferred order for display
+  */
+
+  const fieldOrder = [
+
+    "Seat No",
+    "Student Name",
+    "Registration No",
+    "Course Code",
+    "Course Title",
+    "Theory (70)",
+    "Practical (30)",
+    "Total (100)",
+    "Percentage",
+    "Grade",
+    "Result"
+
+  ];
+
+
+  fieldOrder.forEach(function(field){
+
+    if(
+      Object.prototype.hasOwnProperty.call(
+        result,
+        field
+      )
+    ){
+
+      const row =
+        document.createElement("tr");
+
+      const labelCell =
+        document.createElement("td");
+
+      const valueCell =
+        document.createElement("td");
+
+
+      labelCell.textContent =
+        field;
+
+
+      valueCell.textContent =
+        result[field];
+
+
+      /*
+        Highlight Pass / Fail
+      */
+
+      if(field === "Result"){
+
+        const value =
+          String(result[field])
+          .toLowerCase();
+
+
+        if(value === "pass"){
+
+          valueCell.classList.add(
+            "result-status-pass"
+          );
+
+        }
+
+
+        if(value === "fail"){
+
+          valueCell.classList.add(
+            "result-status-fail"
+          );
+
+        }
+
+      }
+
+
+      row.appendChild(
+        labelCell
+      );
+
+      row.appendChild(
+        valueCell
+      );
+
+      table.appendChild(
+        row
+      );
+
+    }
+
+  });
+
+
+  card.style.display =
+    "block";
+
+
+  card.scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
+
+}
+
+
+/* ==========================================
+   ERROR MESSAGE
+========================================== */
+
+function showError(text){
+
+  const message =
+    document.getElementById("resultMessage");
+
+
+  message.innerHTML =
+    '<div class="result-error">' +
+    escapeHTML(text) +
+    '</div>';
+
+}
+
+
+/* ==========================================
+   SIMPLE HTML ESCAPE
+========================================== */
+
+function escapeHTML(text){
+
+  return String(text)
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
+
+}
+
+
+/* ==========================================
+   ENTER KEY SEARCH
+========================================== */
+
+document
+  .getElementById("seatNo")
+  .addEventListener(
+    "keydown",
+    function(event){
+
+      if(event.key === "Enter"){
+
+        document
+          .getElementById("resultPin")
+          .focus();
+
+      }
+
+    }
+  );
+
+
+document
+  .getElementById("resultPin")
+  .addEventListener(
+    "keydown",
+    function(event){
+
+      if(event.key === "Enter"){
+
+        searchResult();
+
+      }
+
+    }
+  );
+
+
+</script>
+
+
+</body>
+</html>
