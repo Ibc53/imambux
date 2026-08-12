@@ -87,7 +87,7 @@ nav a.active{
 
 .hero{
   background:
-    linear-gradient(rgba(11,21,48,.68), rgba(11,21,48,.68)),
+    linear-gradient(rgba(11,21,48,.34), rgba(11,21,48,.34)),
     url("/assets/images/Cover.png"),
     var(--hero);
   background-size:cover;
