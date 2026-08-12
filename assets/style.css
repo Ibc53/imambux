@@ -88,7 +88,7 @@ nav a.active{
 .hero{
   background:
     linear-gradient(rgba(11,21,48,.68), rgba(11,21,48,.68)),
-    url("/assets/images/cover.png"),
+    url("/assets/images/Cover.png"),
     var(--hero);
   background-size:cover;
   background-position:center;
@@ -308,6 +308,11 @@ footer{
   .hero,
   .hero-inner{
     padding:48px 0;
+  }
+
+  /* Adjust cover image position on mobile */
+  .hero{
+    background-position:65% center;
   }
 
   .profile-pic img,
