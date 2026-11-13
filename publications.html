@@ -1,444 +1,656 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Publications | Imam Bux</title>
 
   <meta name="description"
-        content="Peer-reviewed publications, research manuscripts, book chapter, and conference contributions by Imam Bux in agricultural extension, technology adoption, rural development, dairy farming systems, and sustainable agriculture.">
+        content="Published journal articles, research manuscripts, book chapters and conference contributions by Dr. Imam Bux in agricultural extension, technology adoption, agricultural communication and sustainable farming.">
 
   <link rel="stylesheet" href="assets/style.css">
+
+  <style>
+    .publication-card {
+      margin-bottom: 24px;
+    }
+
+    .publication-list {
+      padding-left: 24px;
+      margin-top: 18px;
+    }
+
+    .publication-list li {
+      margin-bottom: 24px;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+
+    .publication-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .publication-title {
+      font-weight: 700;
+      color: #0b1020;
+    }
+
+    .journal-name {
+      font-style: italic;
+    }
+
+    .publication-meta {
+      color: #5b6b84;
+      font-size: 0.94rem;
+    }
+
+    .doi-link {
+      color: #be185d;
+      text-decoration: none;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    .doi-link:hover {
+      text-decoration: underline;
+    }
+
+    .publication-status {
+      display: inline-block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-top: 6px;
+      color: #475569;
+    }
+
+    .publication-status.published {
+      color: #166534;
+    }
+
+    .publication-status.accepted {
+      color: #92400e;
+    }
+
+    .publication-status.review {
+      color: #475569;
+    }
+
+    .publication-note {
+      color: #64748b;
+      font-size: 0.93rem;
+    }
+
+    @media (max-width: 640px) {
+      .publication-card {
+        margin-bottom: 16px;
+      }
+
+      .publication-list {
+        padding-left: 19px;
+      }
+
+      .publication-list li {
+        font-size: 0.93rem;
+        line-height: 1.65;
+        margin-bottom: 20px;
+      }
+
+      .publication-meta {
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER
-========================= -->
+  <!-- HEADER -->
 
-<header class="site-header">
-  <div class="wrap nav-wrap">
+  <header class="site-header">
+    <div class="wrap nav-wrap">
 
-    <div class="brand">
-      <a href="index.html">IMAMBUX</a>
+      <div class="brand">
+        <a href="index.html">IMAMBUX</a>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="consultancy.html">Consultancy</a></li>
+          <li><a href="community.html">Community</a></li>
+          <li><a class="active" href="publications.html">Publications</a></li>
+          <li><a href="results.html" target="_blank" rel="noopener noreferrer">Student Results</a></li>
+        </ul>
+      </nav>
+
     </div>
-
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="consultancy.html">Consultancy</a></li>
-        <li><a href="community.html">Community</a></li>
-        <li><a class="active" href="publications.html">Publications</a></li>
-      </ul>
-    </nav>
-
-  </div>
-</header>
+  </header>
 
 
-<!-- =========================
-     HERO
-========================= -->
+  <!-- HERO SECTION -->
 
-<section class="hero hero-inner">
-  <div class="wrap center-text">
+  <section class="hero hero-inner">
+    <div class="wrap center-text">
 
-    <p class="eyebrow">Research & Scholarly Output</p>
+      <p class="eyebrow">Research & Scholarly Output</p>
 
-    <h1>Publications & Academic Contributions</h1>
+      <h1>Publications & Academic Contributions</h1>
 
-    <p class="narrow-text">
-      My scholarly work focuses on agricultural extension, farmer technology adoption,
-      innovation diffusion, communication systems, smallholder dairy farming,
-      rural development, and sustainable agriculture in climate-vulnerable farming systems.
-    </p>
-
-  </div>
-</section>
-
-
-<!-- =========================
-     PUBLICATION SUMMARY
-========================= -->
-
-<section class="section-tight">
-  <div class="wrap stats">
-
-    <ul>
-
-      <li>
-        <strong>3</strong>
-        Accepted Peer-Reviewed Articles
-      </li>
-
-      <li>
-        <strong>3</strong>
-        Research Manuscripts Under Review
-      </li>
-
-      <li>
-        <strong>1</strong>
-        Book Chapter
-      </li>
-
-      <li>
-        <strong>2+</strong>
-        Selected Conference Contributions
-      </li>
-
-    </ul>
-
-  </div>
-</section>
-
-
-<!-- =========================
-     MAIN PUBLICATIONS
-========================= -->
-
-<main class="section">
-
-  <div class="wrap single-column">
-
-
-    <!-- =========================
-         ACCEPTED JOURNAL ARTICLES
-    ========================= -->
-
-    <div class="card">
-
-      <h2>Peer-Reviewed Journal Articles — Accepted / Forthcoming</h2>
-
-      <p>
-        Three peer-reviewed journal articles arising from my doctoral research
-        have been accepted for publication.
+      <p class="narrow-text">
+        My scholarly publications address agricultural extension,
+        farmer decision-making, innovation diffusion, agricultural
+        communication, technology adoption, smallholder dairy farming,
+        climate-vulnerable agricultural systems, and sustainable
+        rural development.
       </p>
 
-      <ol>
-
-        <li>
-
-          <strong>
-            Bux, I., Shah, J. A., Mirani, Z., & Uenishi, Y. (2026).
-          </strong>
-
-          <em>
-            From Intention to Adoption: Integrating DOI, TAM, and TPB
-            to Design Extension Strategies for Smallholder Dairy Systems.
-          </em>
-
-          <strong>The Journal of Agricultural Education and Extension.</strong>
-
-          Accepted 25 June 2026; forthcoming.
-
-         
-        </li>
-
-
-        <li>
-
-          <strong>
-            Bux, I., Mirani, Z., Shah, J. A., Kaka, U.,
-            Haris, N. M., Sindhu, A. B., & Shelleng, A. B. (2026).
-          </strong>
-
-          <em>
-            Ranking Communication Channels for Technology Adoption:
-            A Cramér’s V-Based Multi-Channel Analysis in Arid-Zone Dairy Farming.
-          </em>
-
-          <strong>Sarhad Journal of Agriculture.</strong>
-
-          Accepted 2 May 2026; forthcoming.
-
-         
-        </li>
-
-
-        <li>
-
-          <strong>
-            Bux Chachar, I., Mirani, Z., Kaka, U., & Haris, N. M. (2026).
-          </strong>
-
-          <em>
-            Determinants of Willingness to Adopt Recommended Dairy Farming
-            Practices among Smallholders in Climate-Vulnerable Pakistan.
-          </em>
-
-          <strong>Advances in Agricultural and Food Research Journal.</strong>
-
-          Accepted 18 April 2026; forthcoming.
-
-        </li>
-
-      </ol>
-
     </div>
+  </section>
 
 
-    <!-- =========================
-         MANUSCRIPTS UNDER REVIEW
-    ========================= -->
+  <!-- PUBLICATION SUMMARY -->
 
-    <div class="card">
-
-      <h2>Research Articles — Under Review</h2>
-
-      <ol>
-
-        <li>
-
-          <strong>
-            Bux, I., Shah, J. A., Mirani, Z., Kaka, U., & Haris, N. B. M. (2026).
-          </strong>
-
-          <em>
-            Knowledge and Attitudes Shaping Willingness to Adopt Recommended
-            Dairy Farming Practices in Tharparkar, Sindh, Pakistan.
-          </em>
-
-          <strong>The Journal of Agricultural Education and Extension.</strong>
-
-          Under review.
-
-  
-        </li>
-
-
-        <li>
-
-          <strong>
-            Bux, I., Shah, J. A., Mirani, Z., Kaka, U., & Haris, N. B. M. (2026).
-          </strong>
-
-          <em>
-            Willingness to Adopt Recommended Dairy Farming Practices among
-            Small-Scale Dairy Farmers: The Influence of Economic,
-            Informational, and Behavioral Barriers.
-          </em>
-
-          <strong>The Journal of Animal and Plant Sciences.</strong>
-
-          Under review.
-
-
-        </li>
-
-
-        <li>
-
-          <strong>
-            Bux, I., et al. (2026).
-          </strong>
-
-          <em>
-            Determinants of Farmers’ Attitudes towards Adoption of
-            Water Management Technologies in Agriculture.
-          </em>
-
-          <strong>The Journal of Animal and Plant Sciences.</strong>
-
-          Under review.
-
-            
-        </li>
-
-      </ol>
-
-    </div>
-
-
-    <!-- =========================
-         BOOK CHAPTER
-    ========================= -->
-
-    <div class="card">
-
-      <h2>Book Chapter</h2>
+  <section class="section-tight">
+    <div class="wrap stats">
 
       <ul>
 
         <li>
+          <strong>3</strong>
+          Published Journal Articles
+        </li>
 
-          <strong>
-            Syauqi, Y., & Bux, I. (2023).
-          </strong>
+        <li>
+          <strong>1</strong>
+          Accepted / Forthcoming Article
+        </li>
 
-          <em>
-            Extension Education for Swiftlet Ranchers
-            (Industri Sarang Burung Walet) in Sabah.
-          </em>
+        <li>
+          <strong>3</strong>
+          Manuscripts Under Review
+        </li>
 
-          In <em>Extension Education: Road to Sustainable Development Goals.</em>
+        <li>
+          <strong>1</strong>
+          Book Chapter
+        </li>
 
-          ISBN 978-967-960-497-9.
-
+        <li>
+          <strong>2+</strong>
+          Conference Contributions
         </li>
 
       </ul>
 
     </div>
+  </section>
 
 
-    <!-- =========================
-         CONFERENCE PAPERS
-    ========================= -->
+  <!-- MAIN CONTENT -->
 
-    <div class="card">
+  <main class="section">
 
-      <h2>Selected Conference Papers & Research Presentations</h2>
+    <div class="wrap single-column">
+
+
+      <!-- PUBLISHED JOURNAL ARTICLES -->
+
+      <div class="card publication-card">
+
+        <h2>Published Peer-Reviewed Journal Articles</h2>
+
+        <p>
+          The following articles have been published in peer-reviewed
+          academic journals, covering agricultural extension,
+          communication channels, technology adoption, and
+          agricultural environmental data analysis.
+        </p>
+
+        <ol class="publication-list">
+
+
+          <!-- ARTICLE 1 -->
 
           <li>
 
-          <strong>
-            Bux, I., Uenishi, Y., & Shah, J. A. (2026).
-          </strong>
+            Bux Chachar, I., Shah, J. A., Mirani, Z.,
+            &amp; Uenishi, Y. (2026).
 
-          <em>
-            Bridging the Diffusion Gap:
-            Farmer Awareness and Perceptions of MIDORI Rice Practices
-            in Itoshima, Japan.
-          </em>
+            <span class="publication-title">
+              From intention to adoption: Integrating DOI,
+              TAM, and TPB to design extension strategies
+              for smallholder dairy systems.
+            </span>
 
-          2026 National AAAE Poster Session,
-          St. Petersburg, Florida, USA,
-          18–20 May 2026.
+            <span class="journal-name">
+              The Journal of Agricultural Education and Extension.
+            </span>
 
-         
-        </li>
+            Advance online publication.
+
+            <div class="publication-meta">
+              DOI:
+              <a class="doi-link"
+                 href="https://doi.org/10.1080/1389224X.2026.2707091"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                https://doi.org/10.1080/1389224X.2026.2707091
+              </a>
+            </div>
+
+            <span class="publication-status published">
+              Published — 2026
+            </span>
+
+          </li>
 
 
-        <li>
+          <!-- ARTICLE 2 -->
 
-          <strong>
-            Bux, I., & Shah, J. A. (2024).
-          </strong>
+          <li>
 
-          <em>
-            Revolutionizing Dairy Farming by Implementing Innovative
-            Technology and Circular Economy Ideas.
-          </em>
+            Bux, I., Mirani, Z., Shah, J. A.,
+            Kaka, U., Haris, N. B. M.,
+            Sindhu, A. B., &amp; Shelleng, A. B. (2027).
 
-          9th University Consortium Graduate Forum,
-          Universitas Gadjah Mada,
-          Yogyakarta, Indonesia.
+            <span class="publication-title">
+              Ranking communication channels for technology adoption:
+              A Cramér’s V–based multi-channel analysis
+              in arid-zone dairy farming.
+            </span>
 
-        </li>
+            <span class="journal-name">
+              Sarhad Journal of Agriculture,
+            </span>
 
-      </ol>
+            <em>43</em>(1), 86–100.
+
+            <div class="publication-meta">
+              DOI:
+              <a class="doi-link"
+                 href="https://doi.org/10.17582/journal.sja/2027/43.1.86.100"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                https://doi.org/10.17582/journal.sja/2027/43.1.86.100
+              </a>
+            </div>
+
+            <span class="publication-status published">
+              Published Online — October 2026
+            </span>
+
+            <p class="publication-note">
+              Assigned to the 2027 journal volume and issue.
+            </p>
+
+          </li>
+
+
+          <!-- ARTICLE 3 -->
+
+          <li>
+
+            Rehman, H. U., Mazlan, N., Tufail, M. S.,
+            Bux, I., &amp; Saleem, R. (2026).
+
+            <span class="publication-title">
+              Predictive boundaries in tropical rice agro-climatology:
+              Machine-learning assessment of soil moisture
+              and ERA5-Land low-vegetation LAI.
+            </span>
+
+            <span class="journal-name">
+              Geomatica,
+            </span>
+
+            <em>78</em>(2), Article 100130.
+
+            <div class="publication-meta">
+              DOI:
+              <a class="doi-link"
+                 href="https://doi.org/10.1016/j.geomat.2026.100130"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                https://doi.org/10.1016/j.geomat.2026.100130
+              </a>
+            </div>
+
+            <span class="publication-status published">
+              Published — 2026
+            </span>
+
+          </li>
+
+        </ol>
+
+      </div>
+
+
+      <!-- ACCEPTED / FORTHCOMING -->
+
+      <div class="card publication-card">
+
+        <h2>Accepted Journal Articles — Forthcoming</h2>
+
+        <p>
+          The following manuscript has been accepted for
+          publication and is awaiting final bibliographic details.
+        </p>
+
+        <ol class="publication-list">
+
+          <li>
+
+            Bux, I., Mirani, Z., Kaka, U.,
+            &amp; Haris, N. M. (2026).
+
+            <span class="publication-title">
+              Determinants of willingness to adopt
+              recommended dairy farming practices
+              among smallholders in climate-vulnerable Pakistan.
+            </span>
+
+            <span class="journal-name">
+              Advances in Agricultural and Food Research Journal.
+            </span>
+
+            <div>
+              <span class="publication-status accepted">
+                Accepted — Forthcoming
+              </span>
+            </div>
+
+            <p class="publication-note">
+              DOI and final volume, issue, and page details
+              will be added following publication.
+            </p>
+
+          </li>
+
+        </ol>
+
+      </div>
+
+
+      <!-- MANUSCRIPTS UNDER REVIEW -->
+
+      <div class="card publication-card">
+
+        <h2>Research Manuscripts — Under Review / Revision</h2>
+
+        <p>
+          Ongoing manuscripts address farmer knowledge,
+          attitudes, adoption barriers, and agricultural
+          water management technologies.
+        </p>
+
+        <ol class="publication-list">
+
+          <li>
+
+            Bux, I., Shah, J. A., Mirani, Z.,
+            Kaka, U., &amp; Haris, N. B. M.
+
+            <span class="publication-title">
+              Knowledge and attitudes shaping willingness
+              to adopt recommended dairy farming practices
+              in Tharparkar, Sindh, Pakistan.
+            </span>
+
+            <div>
+              <span class="publication-status review">
+                Manuscript under review
+              </span>
+            </div>
+
+          </li>
+
+          <li>
+
+            Bux, I., Shah, J. A., Mirani, Z.,
+            Kaka, U., &amp; Haris, N. B. M.
+
+            <span class="publication-title">
+              Willingness to adopt recommended dairy farming
+              practices among small-scale dairy farmers:
+              The influence of economic, informational,
+              and behavioral barriers.
+            </span>
+
+            <div class="publication-meta">
+              The Journal of Animal and Plant Sciences
+            </div>
+
+            <div>
+              <span class="publication-status review">
+                Manuscript under revision
+              </span>
+            </div>
+
+          </li>
+
+          <li>
+
+            Bux, I., et al.
+
+            <span class="publication-title">
+              Determinants of farmers’ attitudes towards
+              adoption of water management technologies
+              in agriculture.
+            </span>
+
+            <div>
+              <span class="publication-status review">
+                Manuscript under review
+              </span>
+            </div>
+
+          </li>
+
+        </ol>
+
+        <p class="publication-note">
+          Manuscripts in review or revision are listed
+          separately from published journal articles.
+        </p>
+
+      </div>
+
+
+      <!-- BOOK CHAPTER -->
+
+      <div class="card publication-card">
+
+        <h2>Book Chapter</h2>
+
+        <ol class="publication-list">
+
+          <li>
+
+            Syauqi, Y., &amp; Bux, I. (2023).
+
+            <span class="publication-title">
+              Extension education for swiftlet ranchers
+              (Industri Sarang Burung Walet) in Sabah.
+            </span>
+
+            In
+
+            <span class="journal-name">
+              Extension Education: Road to Sustainable
+              Development Goals.
+            </span>
+
+            <div class="publication-meta">
+              ISBN: 978-967-960-497-9
+            </div>
+
+          </li>
+
+        </ol>
+
+      </div>
+
+
+      <!-- CONFERENCE CONTRIBUTIONS -->
+
+      <div class="card publication-card">
+
+        <h2>Selected Conference Papers & Research Presentations</h2>
+
+        <ol class="publication-list">
+
+          <li>
+
+            Bux, I., Uenishi, Y., &amp; Shah, J. A. (2026).
+
+            <span class="publication-title">
+              Bridging the diffusion gap:
+              Farmer awareness and perceptions
+              of MIDORI rice practices in Itoshima, Japan.
+            </span>
+
+            <div class="publication-meta">
+              National Conference of the American Association
+              for Agricultural Education (AAAE),
+              St. Petersburg, Florida, USA,
+              May 2026.
+            </div>
+
+          </li>
+
+          <li>
+
+            Bux, I., &amp; Shah, J. A. (2024).
+
+            <span class="publication-title">
+              Revolutionizing dairy farming by implementing
+              innovative technology and circular economy ideas.
+            </span>
+
+            <div class="publication-meta">
+              9th University Consortium Graduate Forum,
+              Universitas Gadjah Mada,
+              Yogyakarta, Indonesia.
+            </div>
+
+          </li>
+
+        </ol>
+
+      </div>
+
+
+      <!-- CURRENT RESEARCH DIRECTION -->
+
+      <div class="card publication-card">
+
+        <h2>Current Publication & Research Direction</h2>
+
+        <p>
+          My research investigates how farmers evaluate,
+          accept, and adopt agricultural innovations
+          under economic, informational, behavioral,
+          institutional, and environmental constraints.
+        </p>
+
+        <p>
+          Building on my doctoral research at
+          Universiti Putra Malaysia, I examine
+          agricultural extension and advisory systems,
+          farmer decision-making, innovation diffusion,
+          technology acceptance, digital agriculture,
+          smallholder livestock development, and
+          climate-resilient agricultural practices.
+        </p>
+
+        <p>
+          My current research agenda places particular
+          emphasis on understanding the transition from
+          <strong>willingness to actual adoption</strong>,
+          including the roles of communication channels,
+          institutional support, farmer learning,
+          affordability, and access to advisory services.
+        </p>
+
+      </div>
+
+
+      <!-- KEY RESEARCH THEMES -->
+
+      <div class="card publication-card">
+
+        <h2>Key Publication Themes</h2>
+
+        <ul>
+          <li>Agricultural extension and advisory systems</li>
+          <li>Diffusion and adoption of agricultural innovations</li>
+          <li>Farmer knowledge, attitudes, and technology acceptance</li>
+          <li>Communication channels and agricultural information systems</li>
+          <li>Smallholder dairy and livestock farming systems</li>
+          <li>Economic, informational, and behavioral barriers to adoption</li>
+          <li>Climate-smart and sustainable agriculture</li>
+          <li>Digital agricultural extension and technology adoption</li>
+          <li>Rural livelihoods, food security, and resilience</li>
+          <li>Agricultural Knowledge and Innovation Systems (AKIS)</li>
+          <li>Artificial intelligence and agricultural decision support</li>
+        </ul>
+
+      </div>
+
 
     </div>
 
+  </main>
 
-    <!-- =========================
-         CURRENT RESEARCH DIRECTION
-    ========================= -->
 
-    <div class="card">
+  <!-- RESEARCH COLLABORATION -->
 
-      <h2>Current Publication & Research Direction</h2>
+  <section class="contact-band">
 
-      <p>
-        My current research examines how farmers evaluate and adopt agricultural
-        innovations under informational, economic, behavioural, institutional,
-        and environmental constraints.
+    <div class="wrap center-text">
+
+      <h2>Research Collaboration</h2>
+
+      <p class="narrow-text">
+        I welcome international research collaboration
+        in agricultural extension, technology adoption,
+        rural development, dairy and livestock systems,
+        digital agriculture, sustainable farming,
+        joint publications, and comparative
+        agricultural research projects.
       </p>
 
-      <p>
-        Building on my doctoral research, I am particularly interested in
-        agricultural extension and advisory systems, innovation diffusion,
-        technology acceptance, farmer decision-making, digital agriculture,
-        climate-smart farming, dairy and livestock systems, Agricultural
-        Knowledge and Innovation Systems (AKIS), and rural development.
-      </p>
-
-      <p>
-        My emerging research agenda seeks to move beyond simple measures of
-        adoption intention by examining the transition from
-        <strong>willingness to actual adoption</strong>, including the roles of
-        information access, affordability, advisory support, institutional
-        services, farmer learning, and context-specific enabling conditions.
-      </p>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdWFtOwi9ewNpjh18xeGCSorJgkRJ1d7akHrpF2fZV9QVMaZA/viewform"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn">
+        Contact for Research Collaboration
+      </a>
 
     </div>
 
-
-    <!-- =========================
-         RESEARCH THEMES
-    ========================= -->
-
-    <div class="card">
-
-      <h2>Key Publication Themes</h2>
-
-      <ul>
-        <li>Agricultural extension and advisory systems</li>
-        <li>Diffusion and adoption of agricultural innovations</li>
-        <li>Farmer knowledge, attitudes, and technology acceptance</li>
-        <li>Communication channels and agricultural information systems</li>
-        <li>Smallholder dairy and livestock farming systems</li>
-        <li>Economic, informational, and behavioural barriers to adoption</li>
-        <li>Climate-smart and sustainable agriculture</li>
-        <li>Digital agricultural extension and technology adoption</li>
-        <li>Rural livelihoods, food security, and resilience</li>
-        <li>Agricultural Knowledge and Innovation Systems (AKIS)</li>
-      </ul>
-
-    </div>
+  </section>
 
 
-  </div>
-</main>
+  <!-- FOOTER -->
 
+  <footer>
+    &copy; <span id="year"></span>
+    Imam Bux &bull; All rights reserved
+  </footer>
 
-<!-- =========================
-     RESEARCH COLLABORATION
-========================= -->
-
-<section class="contact-band">
-
-  <div class="wrap center-text">
-
-    <h2>Research Collaboration</h2>
-
-    <p class="narrow-text">
-      I welcome international collaboration on agricultural extension,
-      technology adoption, rural development, dairy and livestock systems,
-      digital agriculture, sustainable farming, joint publications,
-      conference papers, and comparative research projects.
-    </p>
-
-    <a
-      href="https://docs.google.com/forms/d/e/1FAIpQLSdWFtOwi9ewNpjh18xeGCSorJgkRJ1d7akHrpF2fZV9QVMaZA/viewform"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn">
-      Contact for Research Collaboration
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-  © <span id="year"></span> Imam Bux • All rights reserved
-</footer>
-
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
 </html>
-
- 
